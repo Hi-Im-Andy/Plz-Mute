@@ -36,7 +36,8 @@ while 1:
     today = today.strftime("%m-%d-%Y")
     data = stream.read(1024)
     rms = audioop.rms(data, 2)
-    decibel = math.log10(rms) #Converts rms to decibels
-    if((decibel * 20)> 85): #Checks if the sound is louder than 85 decibels
-        if(last_strike(today)):
-            os.system("TASKKILL /F /IM application.exe") #Kills application
+    print(rms)
+    # decibel = math.log10(rms) #Converts rms to decibels
+    # if((decibel * 20)> 85): #Checks if the sound is louder than 85 decibels
+    #     if(last_strike(today)):
+    #         os.system("TASKKILL /F /IM application.exe") #Kills application
